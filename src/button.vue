@@ -62,7 +62,7 @@
             order:2;
         }
         > .icon{
-            oreder:1;
+            order:1;
             margin-top:.1em;
             margin-right:.1em;
         }
