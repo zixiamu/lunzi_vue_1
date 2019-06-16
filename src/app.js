@@ -16,6 +16,8 @@ var app = new Vue({
     }
 })
 import  chai from 'chai'
+import spies from 'chai-spies'
+chai.use(spies)
 
 const  expect =chai.expect
 
@@ -83,18 +85,19 @@ const  expect =chai.expect
     vm.$el.remove()
     vm.$destroy()
 }
+
 //mock
 {
     const Contructor = Vue.extend(Button)
-    const gbutton = new Contructor({
+    const vm = new Contructor({
         propsData:{
             icon:'settings',
         }
     })
-    gbutton.$mount()
-    gbutton.$on('click',function (){
-        console.log(1)
-    })
-    let button=gbutton.$el
+    vm.$mount()
+    let spy =chai.spy(function (){})
+    vm.$on('click',spy)
+    let button=vm.$el
     button.click()
+    expect(spy).to.have.been.called()
 }
