@@ -10,7 +10,17 @@
 </template>
 <script>
    export  default {
-       props:["icon","iconPosition"]
+       //props:["icon","iconPosition"]
+       props:{
+           icon:{},
+           iconPosition:{
+               type:String,
+               default:'left',
+               validator(value) {
+                   return value ==='left'|| value === 'right'
+               }
+           }
+       }
    }
 </script>
 <style lang="scss">
@@ -43,13 +53,13 @@
         > .icon{
             oreder:1;
             margin-top:.1em;
-            margin-right:.3em;
+            margin-right:.1em;
         }
 
         &.icon-right{
             > .icon{
                 order:2;
-                margin-left:.3em;
+                margin-left:.1em;
                 margin-right: 0;
             }
             > .content{
