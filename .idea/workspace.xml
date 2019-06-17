@@ -99,8 +99,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="8" column="56" lean-forward="true" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+            <state relative-caret-position="150">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -213,7 +213,7 @@
       <workItem from="1560606109719" duration="5034000" />
       <workItem from="1560654572901" duration="877000" />
       <workItem from="1560656777439" duration="13887000" />
-      <workItem from="1560744969664" duration="8667000" />
+      <workItem from="1560744969664" duration="9357000" />
     </task>
     <task id="LOCAL-00001" summary="npm install vue">
       <created>1560513923261</created>
@@ -352,10 +352,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34393000" />
+    <option name="totallyTimeSpent" value="35083000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-28" y="107" width="1071" height="1046" extended-state="0" />
+    <frame x="712" y="79" width="1071" height="1046" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12778315" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24973656" />
@@ -514,8 +515,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="56" lean-forward="true" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+        <state relative-caret-position="150">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
