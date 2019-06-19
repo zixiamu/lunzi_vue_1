@@ -33,11 +33,22 @@
         }
     </style>
     <style>
-
+        .box{
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
 <div id="app">
+    <div class="box">
+        <g-input value="张三" :disabled="true"></g-input>
+        <g-input value="李四" readonly></g-input>
+        <g-input value="王五"></g-input>
+    </div>
+    <div class="box">
+        <g-input value="王" error="姓名不能少于2个字"></g-input>
+    </div>
+    <div style="margin: 20px;">
     <g-button :loading="loading1" @click="loading1=!loading1">
         按钮
     </g-button>
@@ -58,7 +69,7 @@
             下一页
         </g-button>
     </g-button-group>
-    <div id="test"></div>
+    </div>
 </div>
 <script src="./src/app.js"></script>
 
