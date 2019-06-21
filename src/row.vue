@@ -15,7 +15,7 @@
                 validator(value) {
                     return ['left','right','center'].includes(value)
                 }
-            }
+            },
         },
         computed:{
             rowStyle(){
@@ -37,6 +37,7 @@
 <style scoped lang="scss">
     .row{
         display: flex;
+        flex-wrap: wrap;
         &.align-left{
             justify-content: flex-start;
         }

@@ -41,15 +41,25 @@
 <body>
 <div id="app">
     <g-row gutter="20">
-        <g-col>1</g-col>
-        <g-col>2</g-col>
+        <g-col span="2"
+            :ipad="{span:8}"
+            :narrowpc="{span:4}"
+            :pc="{span:2}"
+            :widepc="{span:1}"
+        >1</g-col>
+        <g-col span="22"
+           :ipad="{span:16}"
+           :narrowpc="{span:20}"
+           :pc="{span:22}"
+           :widepc="{span:23}"
+        >2</g-col>
     </g-row>
-    <g-row>
+    <g-row gutter="20">
         <g-col>1</g-col>
         <g-col>2</g-col>
         <g-col>3</g-col>
     </g-row>
-    <g-row>
+    <g-row gutter="20">
         <g-col>1</g-col>
         <g-col>2</g-col>
         <g-col>3</g-col>
