@@ -44,7 +44,9 @@ var app = new Vue({
     },
     methods:{
         showToast(){
-            this.$toast('我是message')
+            this.$toast('很多文字',{
+               enableHtml: false
+            })
         }
     }
 })

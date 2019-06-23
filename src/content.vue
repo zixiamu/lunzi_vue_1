@@ -9,7 +9,6 @@
     }
 
 </script>
-<style lang="
 <style lang="scss" scoped>
     .content{
         flex-grow:1 ;
