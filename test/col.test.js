@@ -1,13 +1,16 @@
 const expect = chai.expect;
 import Vue from 'vue'
 import Col from '../src/col'
+import Row from '../src/row'
 
 Vue.config.productionTip = false
 Vue.config.devtools = false
 
 describe('Row', () => {
     //BDD 行为驱动测试
-
+    it('存在',()=>{
+        expect(Row).to.exist
+    })
     it('接收span属性', () => {
         const div = document.createElement('div')
         document.body.appendChild(div)

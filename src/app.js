@@ -52,8 +52,7 @@ var app = new Vue({
                         console.log('他说他已经充值智商了')
                     }
                 },
-                autoClose: false,
-                autoCloseDelay: 4,
+                autoClose: 3,
                 position,
             })
         },
