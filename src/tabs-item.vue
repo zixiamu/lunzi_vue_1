@@ -36,12 +36,13 @@
         },
         methods:{
             xxx(){
-                this.eventBus.$emit('update:selected',this.name)
+                this.eventBus.$emit('update:selected',this.name,this)
             }
         },
     }
 </script>
 <style lang="scss" scoped>
+    $blue:blue;
     .tabs-item{
         flex-shrink: 0;
         align-items: center;
@@ -50,7 +51,8 @@
         cursor: pointer;
         height: 100%;
         &.active{
-            background: red;
+            color: $blue;
+            font-weight: bold;
         }
     }
 </style>
