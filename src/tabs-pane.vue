@@ -14,7 +14,7 @@
             },
         },
         data(){
-            return{``
+            return{
                active:false
             }
         },
