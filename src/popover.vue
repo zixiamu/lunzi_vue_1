@@ -3,7 +3,7 @@
         <div ref="contentWrapper" class="content-wrapper" v-if="visible">
             <slot name="content" ></slot>
         </div>
-        <span ref="triggerWrapper">
+        <span ref="triggerWrapper"style="display: inline-flex">
             <slot></slot>
         </span>
     </div>
@@ -13,9 +13,6 @@
         name:'GuluPopover',
         data(){
             return{visible:false}
-        },
-        mounted(){
-            console.log(this.$refs.triggerWrapper)
         },
         methods:{
             positionContent(){
@@ -30,11 +27,16 @@
                         this.$refs.popover.contains(e.target))) {
                     return;
                 }
+                if ( this.$refs.contentWrapper &&
+                    (this.$refs.contentWrapper === e.target||
+                        this.$refs.contentWrapper.contains(e.target))) {
+                    return;
+                }
                 this.close()
             },
             open(){
                 this.visible=true
-                setTimeout(()=>{
+                this.$nextTick(()=>{
                     this.positionContent()
                     document.addEventListener('click',this.onClickDocument)
                 })
@@ -45,7 +47,6 @@
             },
             onClick(event){
                 if(this.$refs.triggerWrapper.contains(event.target)){
-                    this.close()
                     if(this.visible === true){
                         this.close()
                     }else {
@@ -57,6 +58,8 @@
     }
 </script>
 <style scoped lang="scss">
+    $border-color:#333;
+    $border-radius:4px;
     .popover{
         display: inline-block;
         vertical-align: top;
@@ -64,8 +67,31 @@
     }
     .content-wrapper{
         position: absolute;
+        border-radius: $border-radius;
+        border:1px solid $border-color;
         transform: translateY(-100%);
-        border: 1px solid red;
-        box-shadow: 0 0 3px rgba(0,0,0,0.5);
+        margin-top: -10px;
+        filter: drop-shadow(0 1px 1px rgba(0,0,0,0.5));
+        background: white;
+        padding: .5em 1em;
+        max-width: 20em;
+        word-break: break-all;
+        &::before,&::after{
+            content: '';
+            display: block;
+            border: 10px solid transparent;
+            width: 0;
+            height: 0;
+            position: absolute;
+            left: 10px;
+          }
+        &::before{
+            border-top-color: black;
+            top: 100%;
+        }
+        &::after{
+            border-top-color: white;
+            top: calc(100% - 2px);
+        }
     }
 </style>
