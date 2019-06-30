@@ -1,8 +1,8 @@
 <template>
     <div class="popover" ref="popover">
-        <div ref="contentWrapper" class="content-wrapper" v-if="visible"
+        <div ref="contentWrapper" class="contentWrapper" v-if="visible"
         :class="{[`position-${position}`]:true}">
-            <slot name="content" ></slot>
+            <slot name="content" :close="close"></slot>
         </div>
         <span ref="triggerWrapper"style="display: inline-flex">
             <slot></slot>
@@ -136,7 +136,7 @@
         vertical-align: top;
         position: relative;
     }
-    .content-wrapper{
+    .contentWrapper{
         position: absolute;
         border-radius: $border-radius;
         border:1px solid $border-color;
